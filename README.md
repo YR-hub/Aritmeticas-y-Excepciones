@@ -1,13 +1,12 @@
-public class ArithmeticExceptionExample {
+public class ArrayIndexOutOfBoundsExceptionExample {
     public static void main(String[] args) {
-        int dividend = 10;
-        int divisor = 0;
+        int[] array = { 1, 2, 3, 4, 5, 6 };
 
         try {
-            int result = dividend / divisor;
-            System.out.println("Resultado: " + result);
-        } catch (ArithmeticException e) {
-            System.out.println("Error: División entre cero.");
+            int element = array[8];
+            System.out.println("Elemento: " + element);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: Índice fuera de rango del array.");
         }
     }
 }
